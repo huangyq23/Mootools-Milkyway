@@ -1,0 +1,76 @@
+@import "bourbon/bourbon";
+
+@mixin my-form($form-width: 250px, $form-padding: 10px) {
+  $form-double-padding: $form-padding*2;
+  margin: 0;
+  padding: 0;
+  padding-bottom: $form-padding;
+  overflow: hidden;
+  .form-part {
+    margin-top: $form-padding;
+    margin-left: $form-padding;
+    margin-right: $form-padding;
+    display: block;
+    overflow: hidden;
+  }
+  label {
+    font-family: $helvetica;
+    color: #5f5f5f;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    display: block;
+    text-shadow: 0 1px 0px #ffffff;
+  }
+  input, textarea {
+    font-family: $helvetica;
+    font-weight: 200;
+    background: #fcfcfc;
+    color: #5f5f5f;
+    border-radius: 1px;
+    display: block;
+    border-radius: 2px;
+    letter-spacing: 1px;
+  }
+  #{$all-text-inputs}, textarea {
+    display: block;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: $form-width - $form-double-padding - 12px;
+    min-width: $form-width - $form-double-padding - 12px;
+    outline: none;
+    float: left;
+    font-size: 16px;
+    @include box-shadow(inset 0px 0px 2px 1px #d6d6d6);
+    &:focus {
+      border-color: #a5a5a5;
+    }
+  }
+  button, input[type="submit"] {
+    width: $form-width - $form-double-padding;
+  }
+
+  .form-help-text {
+    color: #828282;
+    margin-left: $form-padding;
+    line-height: $form-padding;
+    font-size: $form-padding/2;
+    font-family: sans-serif;
+    float: left;
+  }
+  .form-error {
+    overflow: hidden;
+    font-size: 14px;
+    color: #ff4548;
+  }
+  .errorlist {
+    li {
+      font-family: sans-serif;
+      list-style: none;
+      line-height: $form-padding;
+      font-size: $form-padding/2;
+      color: #ff4548;
+    }
+  }
+}
