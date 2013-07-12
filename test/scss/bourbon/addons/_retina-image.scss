@@ -13,7 +13,7 @@
         background-image: image-url("#{$retina-filename}.#{$extension}");
       }
       @else {
-        background-image: image-url("#{$filename}@2x.#{$extension}");
+        background-image: image-url("#{$filename}@2X.#{$extension}");
       }
     }
 
@@ -22,7 +22,7 @@
         background-image: url("#{$retina-filename}.#{$extension}");
       }
       @else {
-        background-image: url("#{$filename}@2x.#{$extension}");
+        background-image: url("#{$filename}@2X.#{$extension}");
       }
     }
 

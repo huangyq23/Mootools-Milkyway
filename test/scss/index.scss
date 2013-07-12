@@ -22,7 +22,7 @@ body {
   }
 }
 
-#login-form-wrapper  {
+#login-form-wrapper{
   @include my-form(300px, 10px);
 }
 
