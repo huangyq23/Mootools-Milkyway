@@ -2,6 +2,7 @@
 
 @mixin my-form($form-width: 250px, $form-padding: 10px) {
   $form-double-padding: $form-padding*2;
+  font-family: $helvetica;
   margin: 0;
   padding: 0;
   padding-bottom: $form-padding;
@@ -42,7 +43,11 @@
     outline: none;
     float: left;
     font-size: 16px;
-    @include box-shadow(inset 0px 0px 2px 1px #d6d6d6);
+    @include box-shadow(inset 0px 0px 4px 0px #d6d6d6);
+    &.validation-failed{
+      border-color: #ff4548  !important;
+      @include box-shadow(inset 0px 0px 4px 0px #ff4548);
+    }
     &:focus {
       border-color: #a5a5a5;
     }
@@ -60,9 +65,10 @@
     float: left;
   }
   .form-error {
-    overflow: hidden;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 200;
     color: #ff4548;
+    text-shadow: 0 1px 0px #ffffff;
   }
   .errorlist {
     li {

@@ -53,8 +53,17 @@
             return $(this.element);
         },
         addSubview: function (view) {
+            view.superview = this;
             this.subviews.push(view);
+            view.viewWillAppear();
             this.element.grab(view);
+        },
+        removeSubview: function(view){
+            this.subviews.erase(view);
+            $(view).dispose();
+        },
+        viewWillAppear:function(){
+
         },
         bindEvents: function () {
         },

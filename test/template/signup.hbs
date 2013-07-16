@@ -1,23 +1,29 @@
-<div id="login-form-wrapper">
+<div id="signup-form-wrapper">
     <div class="form-part">
         <label for="username" class="form-field-label">Username</label>
-        <input type="text" id="username" autocomplete="off" data-validators="required msgPos:'username-error'">
+        <input type="text" id="username" autocomplete="off" data-validators="required validate-email msgPos:'username-error'">
         <div id="username-error" class="form-error"></div>
     </div>
     <div class="form-part">
         <label for="password" class="form-field-label">Password</label>
-        <input type="password" id="password" autocomplete="off" data-validators="required msgPos:'password-error'">
+        <input type="password" id="password" autocomplete="off" data-validators="required minLength:5 msgPos:'password-error'">
         <div id="password-error" class="form-error"></div>
+    </div>
+    <div class="form-part">
+        <label for="password2" class="form-field-label">Re-type Password</label>
+        <input type="password" id="password2" autocomplete="off" data-validators="matchField:'password' msgPos:'password2-error'">
+        <div id="password2-error" class="form-error"></div>
     </div>
     <div class="form-part">
         <div id="form-error" class="form-error"></div>
     </div>
     <div class="form-part">
-        <button id="login-button" class="primary-button">Login</button>
+        <button id="signup-button" class="primary-button">Sign Up</button>
     </div>
     <div class="form-part">
-        <button id="signup-button" class="secondary-button">Do Not Have An Account</button>
+        <button id="login-button" class="secondary-button">Already Got An Account</button>
     </div>
+
 </div>
 
 

@@ -11,23 +11,7 @@ body {
   @include retina-image('../img/vertical_cloth', 399px 400px);
 }
 
-#login {
-  width: 300px;
-  background: rgb(244, 244, 244);
-  margin: 30px auto;
-  border-radius: 3px;
-  box-shadow: 0 1px 10px #262626;
-  &.error {
-    @include animation(shake .5s linear);
-  }
-}
-
-#login-form-wrapper{
-  @include my-form(300px, 10px);
-}
-
 @include keyframes(shake) {
-
   8%, 41% {
     @include transform(translateX(-10px));
   }
@@ -44,3 +28,43 @@ body {
     @include transform(translateX(0));
   }
 }
+@include keyframes(ro) {
+
+  from {
+    @include transform(rotateZ(0));
+  }
+  to{
+    @include transform(rotateZ(180deg));
+  }
+}
+
+
+#login, #signup {
+  width: 300px;
+  background: rgb(244, 244, 244);
+  margin: 30px auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px #262626;
+  &.error {
+    @include animation(shake .5s linear);
+  }
+
+}
+
+.spinner{
+background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+}
+.spinner-img{
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/loading.png');
+  background-position: 0 0;
+  background-size: 32px 32px;
+  @include animation(ro 1s linear infinite);
+}
+
+#login-form-wrapper, #signup-form-wrapper{
+  @include my-form(300px, 10px);
+}
+

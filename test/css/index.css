@@ -154,78 +154,6 @@ body {
       background-image: url("../img/vertical_cloth@2X.png");
       background-size: 399px 400px; } }
 
-#login {
-  width: 300px;
-  background: #f4f4f4;
-  margin: 30px auto;
-  border-radius: 3px;
-  box-shadow: 0 1px 10px #262626; }
-  #login.error {
-    -webkit-animation: shake 0.5s linear;
-    -moz-animation: shake 0.5s linear;
-    animation: shake 0.5s linear; }
-
-#login-form-wrapper {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
-  overflow: hidden; }
-  #login-form-wrapper .form-part {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: block;
-    overflow: hidden; }
-  #login-form-wrapper label {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #5f5f5f;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    display: block;
-    text-shadow: 0 1px 0px #ffffff; }
-  #login-form-wrapper input, #login-form-wrapper textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    background: #fcfcfc;
-    color: #5f5f5f;
-    border-radius: 1px;
-    display: block;
-    border-radius: 2px;
-    letter-spacing: 1px; }
-  #login-form-wrapper input[type="email"], #login-form-wrapper input[type="number"], #login-form-wrapper input[type="password"], #login-form-wrapper input[type="search"], #login-form-wrapper input[type="tel"], #login-form-wrapper input[type="text"], #login-form-wrapper input[type="url"], #login-form-wrapper input[type="color"], #login-form-wrapper input[type="date"], #login-form-wrapper input[type="datetime"], #login-form-wrapper input[type="datetime-local"], #login-form-wrapper input[type="month"], #login-form-wrapper input[type="time"], #login-form-wrapper input[type="week"], #login-form-wrapper textarea {
-    display: block;
-    padding: 5px;
-    border: 1px solid #cccccc;
-    width: 268px;
-    min-width: 268px;
-    outline: none;
-    float: left;
-    font-size: 16px;
-    box-shadow: inset 0px 0px 2px 1px #d6d6d6; }
-    #login-form-wrapper input[type="email"]:focus, #login-form-wrapper input[type="number"]:focus, #login-form-wrapper input[type="password"]:focus, #login-form-wrapper input[type="search"]:focus, #login-form-wrapper input[type="tel"]:focus, #login-form-wrapper input[type="text"]:focus, #login-form-wrapper input[type="url"]:focus, #login-form-wrapper input[type="color"]:focus, #login-form-wrapper input[type="date"]:focus, #login-form-wrapper input[type="datetime"]:focus, #login-form-wrapper input[type="datetime-local"]:focus, #login-form-wrapper input[type="month"]:focus, #login-form-wrapper input[type="time"]:focus, #login-form-wrapper input[type="week"]:focus, #login-form-wrapper textarea:focus {
-      border-color: #a5a5a5; }
-  #login-form-wrapper button, #login-form-wrapper input[type="submit"] {
-    width: 280px; }
-  #login-form-wrapper .form-help-text {
-    color: #828282;
-    margin-left: 10px;
-    line-height: 10px;
-    font-size: 5px;
-    font-family: sans-serif;
-    float: left; }
-  #login-form-wrapper .form-error {
-    overflow: hidden;
-    font-size: 14px;
-    color: #ff4548; }
-  #login-form-wrapper .errorlist li {
-    font-family: sans-serif;
-    list-style: none;
-    line-height: 10px;
-    font-size: 5px;
-    color: #ff4548; }
-
 @-webkit-keyframes shake {
   8%, 41% {
     -webkit-transform: translateX(-10px); }
@@ -289,3 +217,122 @@ body {
 
   0%, 100% {
     transform: translateX(0); } }
+
+@-webkit-keyframes ro {
+  from {
+    -webkit-transform: rotateZ(0); }
+
+  to {
+    -webkit-transform: rotateZ(180deg); } }
+
+@-moz-keyframes ro {
+  from {
+    -moz-transform: rotateZ(0); }
+
+  to {
+    -moz-transform: rotateZ(180deg); } }
+
+@-o-keyframes ro {
+  from {
+    -o-transform: rotateZ(0); }
+
+  to {
+    -o-transform: rotateZ(180deg); } }
+
+@keyframes ro {
+  from {
+    transform: rotateZ(0); }
+
+  to {
+    transform: rotateZ(180deg); } }
+
+#login, #signup {
+  width: 300px;
+  background: #f4f4f4;
+  margin: 30px auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px #262626; }
+  #login.error, #signup.error {
+    -webkit-animation: shake 0.5s linear;
+    -moz-animation: shake 0.5s linear;
+    animation: shake 0.5s linear; }
+
+.spinner {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px; }
+
+.spinner-img {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/loading.png");
+  background-position: 0 0;
+  background-size: 32px 32px;
+  -webkit-animation: ro 1s linear infinite;
+  -moz-animation: ro 1s linear infinite;
+  animation: ro 1s linear infinite; }
+
+#login-form-wrapper, #signup-form-wrapper {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  overflow: hidden; }
+  #login-form-wrapper .form-part, #signup-form-wrapper .form-part {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+    overflow: hidden; }
+  #login-form-wrapper label, #signup-form-wrapper label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5f5f5f;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    display: block;
+    text-shadow: 0 1px 0px #ffffff; }
+  #login-form-wrapper input, #login-form-wrapper textarea, #signup-form-wrapper input, #signup-form-wrapper textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    background: #fcfcfc;
+    color: #5f5f5f;
+    border-radius: 1px;
+    display: block;
+    border-radius: 2px;
+    letter-spacing: 1px; }
+  #login-form-wrapper input[type="email"], #login-form-wrapper input[type="number"], #login-form-wrapper input[type="password"], #login-form-wrapper input[type="search"], #login-form-wrapper input[type="tel"], #login-form-wrapper input[type="text"], #login-form-wrapper input[type="url"], #login-form-wrapper input[type="color"], #login-form-wrapper input[type="date"], #login-form-wrapper input[type="datetime"], #login-form-wrapper input[type="datetime-local"], #login-form-wrapper input[type="month"], #login-form-wrapper input[type="time"], #login-form-wrapper input[type="week"], #login-form-wrapper textarea, #signup-form-wrapper input[type="email"], #signup-form-wrapper input[type="number"], #signup-form-wrapper input[type="password"], #signup-form-wrapper input[type="search"], #signup-form-wrapper input[type="tel"], #signup-form-wrapper input[type="text"], #signup-form-wrapper input[type="url"], #signup-form-wrapper input[type="color"], #signup-form-wrapper input[type="date"], #signup-form-wrapper input[type="datetime"], #signup-form-wrapper input[type="datetime-local"], #signup-form-wrapper input[type="month"], #signup-form-wrapper input[type="time"], #signup-form-wrapper input[type="week"], #signup-form-wrapper textarea {
+    display: block;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: 268px;
+    min-width: 268px;
+    outline: none;
+    float: left;
+    font-size: 16px;
+    box-shadow: inset 0px 0px 4px 0px #d6d6d6; }
+    #login-form-wrapper input[type="email"].validation-failed, #login-form-wrapper input[type="number"].validation-failed, #login-form-wrapper input[type="password"].validation-failed, #login-form-wrapper input[type="search"].validation-failed, #login-form-wrapper input[type="tel"].validation-failed, #login-form-wrapper input[type="text"].validation-failed, #login-form-wrapper input[type="url"].validation-failed, #login-form-wrapper input[type="color"].validation-failed, #login-form-wrapper input[type="date"].validation-failed, #login-form-wrapper input[type="datetime"].validation-failed, #login-form-wrapper input[type="datetime-local"].validation-failed, #login-form-wrapper input[type="month"].validation-failed, #login-form-wrapper input[type="time"].validation-failed, #login-form-wrapper input[type="week"].validation-failed, #login-form-wrapper textarea.validation-failed, #signup-form-wrapper input[type="email"].validation-failed, #signup-form-wrapper input[type="number"].validation-failed, #signup-form-wrapper input[type="password"].validation-failed, #signup-form-wrapper input[type="search"].validation-failed, #signup-form-wrapper input[type="tel"].validation-failed, #signup-form-wrapper input[type="text"].validation-failed, #signup-form-wrapper input[type="url"].validation-failed, #signup-form-wrapper input[type="color"].validation-failed, #signup-form-wrapper input[type="date"].validation-failed, #signup-form-wrapper input[type="datetime"].validation-failed, #signup-form-wrapper input[type="datetime-local"].validation-failed, #signup-form-wrapper input[type="month"].validation-failed, #signup-form-wrapper input[type="time"].validation-failed, #signup-form-wrapper input[type="week"].validation-failed, #signup-form-wrapper textarea.validation-failed {
+      border-color: #ff4548  !important;
+      box-shadow: inset 0px 0px 4px 0px #ff4548; }
+    #login-form-wrapper input[type="email"]:focus, #login-form-wrapper input[type="number"]:focus, #login-form-wrapper input[type="password"]:focus, #login-form-wrapper input[type="search"]:focus, #login-form-wrapper input[type="tel"]:focus, #login-form-wrapper input[type="text"]:focus, #login-form-wrapper input[type="url"]:focus, #login-form-wrapper input[type="color"]:focus, #login-form-wrapper input[type="date"]:focus, #login-form-wrapper input[type="datetime"]:focus, #login-form-wrapper input[type="datetime-local"]:focus, #login-form-wrapper input[type="month"]:focus, #login-form-wrapper input[type="time"]:focus, #login-form-wrapper input[type="week"]:focus, #login-form-wrapper textarea:focus, #signup-form-wrapper input[type="email"]:focus, #signup-form-wrapper input[type="number"]:focus, #signup-form-wrapper input[type="password"]:focus, #signup-form-wrapper input[type="search"]:focus, #signup-form-wrapper input[type="tel"]:focus, #signup-form-wrapper input[type="text"]:focus, #signup-form-wrapper input[type="url"]:focus, #signup-form-wrapper input[type="color"]:focus, #signup-form-wrapper input[type="date"]:focus, #signup-form-wrapper input[type="datetime"]:focus, #signup-form-wrapper input[type="datetime-local"]:focus, #signup-form-wrapper input[type="month"]:focus, #signup-form-wrapper input[type="time"]:focus, #signup-form-wrapper input[type="week"]:focus, #signup-form-wrapper textarea:focus {
+      border-color: #a5a5a5; }
+  #login-form-wrapper button, #login-form-wrapper input[type="submit"], #signup-form-wrapper button, #signup-form-wrapper input[type="submit"] {
+    width: 280px; }
+  #login-form-wrapper .form-help-text, #signup-form-wrapper .form-help-text {
+    color: #828282;
+    margin-left: 10px;
+    line-height: 10px;
+    font-size: 5px;
+    font-family: sans-serif;
+    float: left; }
+  #login-form-wrapper .form-error, #signup-form-wrapper .form-error {
+    font-size: 12px;
+    font-weight: 200;
+    color: #ff4548;
+    text-shadow: 0 1px 0px #ffffff; }
+  #login-form-wrapper .errorlist li, #signup-form-wrapper .errorlist li {
+    font-family: sans-serif;
+    list-style: none;
+    line-height: 10px;
+    font-size: 5px;
+    color: #ff4548; }
